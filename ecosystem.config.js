@@ -24,19 +24,19 @@ module.exports = {
    */
   deploy : {
     production : {
-      user : 'node',
+      user : 'jack',
       host : 'jackyang.me',
       ref  : 'origin/master',
       repo : 'git@github.com:jackgit/pm2-deploy-test.git',
-      path : '/var/www//pm2-test/production',
+      path : '/home/jack/www/production',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
-      user : 'node',
+      user : 'jack',
       host : 'jackyang.me',
       ref  : 'origin/master',
       repo : 'git@github.com:jackgit/pm2-deploy-test.git',
-      path : '/var/www/pm2-test/development',
+      path : '/home/jack/www/development',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
